@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Start Node.js App",
+			"command": "npm install && npm start",
+			"args": [],
+			"group": "build",
+			"problemMatcher": []
+		}
+	]
+}
