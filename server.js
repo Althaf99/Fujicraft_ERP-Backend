@@ -28,5 +28,5 @@ app.use('/api/raw-material-types', rawMaterialTypesRouter);
 app.use('/api/vendors', vendorsRouter);
 app.use('/api/brands', brandsRouter);
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
