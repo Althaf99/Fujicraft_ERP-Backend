@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const rawMaterialController = require('../controllers/rawMaterialController');
+const rawMaterialController = require('../../controllers/RawMaterial/rawMaterialController');
 
 router.get('/', rawMaterialController.getAll);
 router.post('/', rawMaterialController.create);

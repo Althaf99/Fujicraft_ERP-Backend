@@ -9,17 +9,16 @@ app.use(bodyParser.json());
 
 
 const sequelize = require('./src/config/database');
-const RawMaterial = require('./src/models/RawMaterial');
 sequelize.sync();
 
 
 // Routes
 
-const rawMaterialsRouter = require('./src/routes/rawMaterials');
-const colorsRouter = require('./src/routes/colors');
-const rawMaterialTypesRouter = require('./src/routes/rawMaterialTypes');
-const vendorsRouter = require('./src/routes/vendors');
-const brandsRouter = require('./src/routes/brands');
+const rawMaterialsRouter = require('./src/routes/RawMaterial/rawMaterials');
+const colorsRouter = require('./src/routes/RawMaterial/colors');
+const rawMaterialTypesRouter = require('./src/routes/RawMaterial/rawMaterialTypes');
+const vendorsRouter = require('./src/routes/RawMaterial/vendors');
+const brandsRouter = require('./src/routes/RawMaterial/brands');
 
 
 app.use('/api/raw-materials', rawMaterialsRouter);

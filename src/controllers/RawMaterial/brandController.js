@@ -1,4 +1,4 @@
-const Brand = require('../models/Brand');
+const Brand = require('../../models/RawMaterial/Brand');
 
 exports.getBrands = async (req, res) => {
   try {

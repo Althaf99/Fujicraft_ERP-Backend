@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../../config/database');
 const RawMaterialType = require('./RawMaterialType');
 const Color = require('./Color');
 const Vendor = require('./Vendor');

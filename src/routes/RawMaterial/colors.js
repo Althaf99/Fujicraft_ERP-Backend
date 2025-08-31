@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const colorController = require('../controllers/colorController');
+const colorController = require('../../controllers/RawMaterial/colorController');
 
 router.get('/', colorController.getAll);
 router.post('/', colorController.create);

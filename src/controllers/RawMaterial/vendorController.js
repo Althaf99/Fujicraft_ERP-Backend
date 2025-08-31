@@ -1,4 +1,4 @@
-const Vendor = require('../models/Vendor');
+const Vendor = require('../../models/RawMaterial/Vendor');
 
 exports.getAll = async (req, res) => {
   const vendors = await Vendor.findAll();
