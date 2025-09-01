@@ -27,9 +27,36 @@ exports.update = async (req, res) => {
   res.json(material);
 };
 
+
 exports.remove = async (req, res) => {
   const material = await RawMaterial.findByPk(req.params.id);
   if (!material) return res.status(404).json({ error: 'Not found' });
   await material.destroy();
   res.json({ success: true });
+};
+
+// Update by matching materialType, Color, Vendor, Brand and summing weights
+exports.updateByAttributes = async (req, res) => {
+  try {
+    const { RawMaterialTypeId, ColorId, VendorId, BrandId, weight } = req.body;
+    if (!RawMaterialTypeId || !ColorId || !VendorId || !BrandId || typeof weight !== 'number') {
+      return res.status(400).json({ error: 'Missing or invalid fields' });
+    }
+    const material = await RawMaterial.findOne({
+      where: {
+        RawMaterialTypeId,
+        ColorId,
+        VendorId,
+        BrandId
+      }
+    });
+    if (!material) {
+      return res.status(404).json({ error: 'Raw material not found for given attributes' });
+    }
+    material.weight += weight;
+    await material.save();
+    res.json(material);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
