@@ -14,11 +14,11 @@ sequelize.sync();
 
 // Routes
 
-const rawMaterialsRouter = require('./src/routes/RawMaterial/rawMaterials');
-const colorsRouter = require('./src/routes/RawMaterial/colors');
-const rawMaterialTypesRouter = require('./src/routes/RawMaterial/rawMaterialTypes');
-const vendorsRouter = require('./src/routes/RawMaterial/vendors');
-const brandsRouter = require('./src/routes/RawMaterial/brands');
+const rawMaterialsRouter = require('./src/routes/RawMaterial/RawMaterials');
+const colorsRouter = require('./src/routes/RawMaterial/RawMaterialColors');
+const rawMaterialTypesRouter = require('./src/routes/RawMaterial/RawMaterialTypes');
+const vendorsRouter = require('./src/routes/RawMaterial/RawMaterialVendors');
+const brandsRouter = require('./src/routes/RawMaterial/RawMaterialBrands');
 
 
 app.use('/api/raw-materials', rawMaterialsRouter);

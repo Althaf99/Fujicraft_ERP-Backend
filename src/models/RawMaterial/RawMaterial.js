@@ -1,9 +1,9 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../../config/database');
 const RawMaterialType = require('./RawMaterialType');
-const Color = require('./Color');
-const Vendor = require('./Vendor');
-const Brand = require('./Brand');
+const Color = require('./RawMaterialColor');
+const Vendor = require('./RawMaterialVendor');
+const Brand = require('./RawMaterialBrand');
 
 
 const RawMaterial = sequelize.define('RawMaterial', {
@@ -11,6 +11,7 @@ const RawMaterial = sequelize.define('RawMaterial', {
   materialCode: { type: DataTypes.STRING },
 }, {
   timestamps: true,
+  // schema: 'erp', // Explicitly set the schema for this model
 });
 
 
