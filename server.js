@@ -17,15 +17,15 @@ sequelize.sync();
 const rawMaterialsRouter = require('./src/routes/RawMaterial/RawMaterials');
 const colorsRouter = require('./src/routes/RawMaterial/RawMaterialColors');
 const rawMaterialTypesRouter = require('./src/routes/RawMaterial/RawMaterialTypes');
-const vendorsRouter = require('./src/routes/RawMaterial/RawMaterialVendors');
-const brandsRouter = require('./src/routes/RawMaterial/RawMaterialBrands');
+const rawMaterialVendorRouter = require('./src/routes/RawMaterial/RawMaterialVendors');
+const rawMaterialBrandRouter = require('./src/routes/RawMaterial/RawMaterialBrands');
 
 
 app.use('/api/raw-materials', rawMaterialsRouter);
-app.use('/api/colors', colorsRouter);
+app.use('/api/raw-material-colors', colorsRouter);
 app.use('/api/raw-material-types', rawMaterialTypesRouter);
-app.use('/api/vendors', vendorsRouter);
-app.use('/api/brands', brandsRouter);
+app.use('/api/raw-material-vendors', rawMaterialVendorRouter);
+app.use('/api/raw-material-brands', rawMaterialBrandRouter);
 
 const PORT = 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
