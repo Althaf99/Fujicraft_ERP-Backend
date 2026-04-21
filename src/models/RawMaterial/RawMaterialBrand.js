@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../../config/database');
 
-const Brand = sequelize.define('Brand', {
+const RawMaterialBrand = sequelize.define('rawMaterial_brand', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -19,4 +19,4 @@ const Brand = sequelize.define('Brand', {
 });
 
 
-module.exports = Brand;
+module.exports = RawMaterialBrand;

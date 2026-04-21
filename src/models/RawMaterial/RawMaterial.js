@@ -1,22 +1,22 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../../config/database');
-const RawMaterialType = require('./RawMaterialType');
-const Color = require('./Color');
-const Vendor = require('./Vendor');
-const Brand = require('./Brand');
+const rawMaterialType = require('./RawMaterialType');
+const rawMaterialColor = require('./RawMaterialColor');
+const rawMaterialVendor = require('./RawMaterialVendor');
+const rawMaterialBrand = require('./RawMaterialBrand');
 
 
-const RawMaterial = sequelize.define('RawMaterial', {
+const RawMaterial = sequelize.define('rawMaterial_list', {
   weight: { type: DataTypes.FLOAT },
-  materialCode: { type: DataTypes.STRING },
+  // materialCode: { type: DataTypes.STRING },
 }, {
   timestamps: true,
 });
 
 
-RawMaterial.belongsTo(RawMaterialType, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
-RawMaterial.belongsTo(Color, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
-RawMaterial.belongsTo(Vendor, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
-RawMaterial.belongsTo(Brand, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
+RawMaterial.belongsTo(rawMaterialType, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
+RawMaterial.belongsTo(rawMaterialColor, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
+RawMaterial.belongsTo(rawMaterialVendor, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
+RawMaterial.belongsTo(rawMaterialBrand, { foreignKey: { allowNull: false }, onDelete: 'RESTRICT' });
 
 module.exports = RawMaterial;

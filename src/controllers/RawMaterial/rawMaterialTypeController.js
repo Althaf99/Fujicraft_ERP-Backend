@@ -6,7 +6,6 @@ exports.getAll = async (req, res) => {
 };
 
 exports.create = async (req, res) => {
-    console.log("Hello World")
   try {
     const type = await RawMaterialType.create(req.body);
     res.status(201).json(type);

@@ -20,12 +20,19 @@ const rawMaterialTypesRouter = require('./src/routes/RawMaterial/rawMaterialType
 const vendorsRouter = require('./src/routes/RawMaterial/vendors');
 const brandsRouter = require('./src/routes/RawMaterial/brands');
 
+const masterBatchColorsRouter = require('./src/routes/MasterBatch/masterBatchColors');
+const masterBatchInventoryRouter = require('./src/routes/MasterBatch/masterBatchInventory');
+
+
 
 app.use('/api/raw-materials', rawMaterialsRouter);
 app.use('/api/colors', colorsRouter);
 app.use('/api/raw-material-types', rawMaterialTypesRouter);
 app.use('/api/vendors', vendorsRouter);
 app.use('/api/brands', brandsRouter);
+
+app.use('/api/master-batch-colors', masterBatchColorsRouter);
+app.use('/api/master-batch-inventory', masterBatchInventoryRouter);
 
 const PORT = 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
