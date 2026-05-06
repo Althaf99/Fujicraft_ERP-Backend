@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/controllers/raw-material/RawMaterialColorController.js
 const Color = require('../../models/RawMaterial/RawMaterialColor');
+========
+const Color = require('../../models/raw-material/raw-material-color.model');
+>>>>>>>> expenses:src/controllers/raw-material/color.controller.js
 
 exports.getAll = async (req, res) => {
   const colors = await Color.findAll();

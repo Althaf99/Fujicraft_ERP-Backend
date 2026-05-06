@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/controllers/raw-material/RawMaterialBrandController.js
 const Brand = require('../../models/RawMaterial/RawMaterialBrand');
+========
+const Brand = require('../../models/raw-material/raw-material-brand.model');
+>>>>>>>> expenses:src/controllers/raw-material/brand.controller.js
 
 exports.getBrands = async (req, res) => {
   try {

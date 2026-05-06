@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/controllers/raw-material/RawMaterialVendorController.js
 const Vendor = require('../../models/RawMaterial/RawMaterialVendor');
+========
+const Vendor = require('../../models/raw-material/raw-material-vendor.model');
+>>>>>>>> expenses:src/controllers/raw-material/vendor.controller.js
 
 exports.getAll = async (req, res) => {
   const vendors = await Vendor.findAll();

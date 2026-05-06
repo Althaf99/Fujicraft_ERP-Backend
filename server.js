@@ -14,11 +14,15 @@ sequelize.sync();
 
 // Routes
 
-const rawMaterialsRouter = require('./src/routes/RawMaterial/RawMaterials');
-const colorsRouter = require('./src/routes/RawMaterial/RawMaterialColors');
-const rawMaterialTypesRouter = require('./src/routes/RawMaterial/RawMaterialTypes');
-const rawMaterialVendorRouter = require('./src/routes/RawMaterial/RawMaterialVendors');
-const rawMaterialBrandRouter = require('./src/routes/RawMaterial/RawMaterialBrands');
+const rawMaterialsRouter = require('./src/routes/raw-material/raw-materials.routes');
+const colorsRouter = require('./src/routes/raw-material/colors.routes');
+const rawMaterialTypesRouter = require('./src/routes/raw-material/raw-material-types.routes');
+const vendorsRouter = require('./src/routes/raw-material/vendors.routes');
+const brandsRouter = require('./src/routes/raw-material/brands.routes');
+
+const masterBatchColorsRouter = require('./src/routes/master-batch/master-batch-colors.routes');
+const masterBatchInventoryRouter = require('./src/routes/master-batch/master-batch-inventory.routes');
+
 
 
 app.use('/api/raw-materials', rawMaterialsRouter);
@@ -26,6 +30,9 @@ app.use('/api/raw-material-colors', colorsRouter);
 app.use('/api/raw-material-types', rawMaterialTypesRouter);
 app.use('/api/raw-material-vendors', rawMaterialVendorRouter);
 app.use('/api/raw-material-brands', rawMaterialBrandRouter);
+
+app.use('/api/master-batch-colors', masterBatchColorsRouter);
+app.use('/api/master-batch-inventory', masterBatchInventoryRouter);
 
 const PORT = 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
