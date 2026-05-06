@@ -14,14 +14,14 @@ sequelize.sync();
 
 // Routes
 
-const rawMaterialsRouter = require('./src/routes/RawMaterial/rawMaterials');
-const colorsRouter = require('./src/routes/RawMaterial/colors');
-const rawMaterialTypesRouter = require('./src/routes/RawMaterial/rawMaterialTypes');
-const vendorsRouter = require('./src/routes/RawMaterial/vendors');
-const brandsRouter = require('./src/routes/RawMaterial/brands');
+const rawMaterialsRouter = require('./src/routes/raw-material/raw-materials.routes');
+const colorsRouter = require('./src/routes/raw-material/colors.routes');
+const rawMaterialTypesRouter = require('./src/routes/raw-material/raw-material-types.routes');
+const vendorsRouter = require('./src/routes/raw-material/vendors.routes');
+const brandsRouter = require('./src/routes/raw-material/brands.routes');
 
-const masterBatchColorsRouter = require('./src/routes/MasterBatch/masterBatchColors');
-const masterBatchInventoryRouter = require('./src/routes/MasterBatch/masterBatchInventory');
+const masterBatchColorsRouter = require('./src/routes/master-batch/master-batch-colors.routes');
+const masterBatchInventoryRouter = require('./src/routes/master-batch/master-batch-inventory.routes');
 
 
 

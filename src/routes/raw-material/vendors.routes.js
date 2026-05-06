@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const vendorController = require('../../controllers/RawMaterial/vendorController');
+const vendorController = require('../../controllers/raw-material/vendor.controller');
 
 router.get('/', vendorController.getAll);
 router.post('/', vendorController.create);

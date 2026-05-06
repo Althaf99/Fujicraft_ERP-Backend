@@ -1,4 +1,4 @@
-const Color = require('../../models/RawMaterial/RawMaterialColor');
+const Color = require('../../models/raw-material/raw-material-color.model');
 
 exports.getAll = async (req, res) => {
   const colors = await Color.findAll();

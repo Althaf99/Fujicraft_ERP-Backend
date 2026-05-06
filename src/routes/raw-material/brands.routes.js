@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const brandController = require('../../controllers/RawMaterial/brandController');
+const brandController = require('../../controllers/raw-material/brand.controller');
 
 router.get('/', brandController.getBrands);
 router.post('/', brandController.createBrand);

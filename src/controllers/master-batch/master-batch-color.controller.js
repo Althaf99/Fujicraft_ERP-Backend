@@ -1,4 +1,4 @@
-const MasterBatchColor = require('../../models/MasterBatch/MasterBatchColor');
+const MasterBatchColor = require('../../models/master-batch/master-batch-color.model');
 
 exports.getAll = async (req, res) => {
   const colors = await MasterBatchColor.findAll();
@@ -13,4 +13,3 @@ exports.create = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
-

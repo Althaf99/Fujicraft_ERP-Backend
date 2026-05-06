@@ -1,4 +1,4 @@
-const MasterBatchInventory = require('../../models/MasterBatch/MasterBatchInventory');
+const MasterBatchInventory = require('../../models/master-batch/master-batch-inventory.model');
 
 exports.getAll = async (req, res) => {
   const inventory = await MasterBatchInventory.findAll();
@@ -13,4 +13,3 @@ exports.create = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
-
